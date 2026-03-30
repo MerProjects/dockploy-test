@@ -3,7 +3,7 @@
 
 echo "Synchronizing database schema..."
 # Push the schema to ensure the database matches our Prisma files
-npx prisma db push --accept-data-loss
+node node_modules/prisma/build/index.js db push --accept-data-loss
 
 echo "Starting Next.js application..."
 # Start the Next.js standalone server
